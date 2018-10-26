@@ -208,7 +208,7 @@
 
 
 
-      $('#right-button').hover(function() {
+      $('#right-button').click(function() {
         var leftPos = outer.scrollLeft();
         outer.animate({
           scrollLeft: leftPos - 1000
@@ -232,7 +232,7 @@
         });
       });
 
-      $('#left-button').hover(function() {
+      $('#left-button').click(function() {
         setVisible($('#right-button'));
         var leftPos = outer.scrollLeft();
         outer.animate({
@@ -261,7 +261,7 @@
 
   <div class="contact-form">
     <p class="form-heading">SCHEDULE YOUR SITE SURVEY</p>
-    <form action="/action_page.php">
+    <form>
       <div class="field1">
         <input type="text" id="location" placeholder="Location" /><label for="location"><a href="#" class="detect">DETECT<img src="assets/images/location.png" class="geo-loc"/></a></label>
       </div>
@@ -274,13 +274,13 @@
         <li><input type="radio" name="category" value="industrial"> &nbsp;Industrial</li></ul>
     </div>
     <div class="field2">
-      <input type="text" id="name" placeholder='&#xf2c0;  Name' /><label for="name"></label>
+      <input type="text" name="name" id="name" placeholder='&#xf2c0;  Name' /><label for="name"></label>
     </div>
     <div class="field3">
-      <input type="email" id="email" placeholder="&#xf003;  Email" /><label for="email"></label>
+      <input type="email" name"email" id="email" placeholder="&#xf003;  Email" /><label for="email"></label>
     </div>
     <div class="field4">
-      <input type="tel" id="phone" placeholder="&#xf095;  Phone" /><label for="phone"></label>
+      <input type="tel" name"phone" id="phone" placeholder="&#xf095;  Phone" /><label for="phone"></label>
     </div>
     <div class="field5">
       <input type="submit" id="submit" /><label for="submit"></label>
@@ -299,7 +299,7 @@
   </div>
 
 <script>
-  $(window).scroll(function(){
+  $(window).scroll(function() {
       if ($(window).scrollTop() >= 0) {
           $('nav').addClass('fixed-header');
           $('nav div').addClass('visible-title');
